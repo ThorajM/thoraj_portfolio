@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Menu Icon -->
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Menu Container -->
+        <div class="maincontainer" id="menuContainer" style="display: none;">
+            <div class="col-md-6 order-md-1">
+                <nav class="navi">
+                    <ul>
+                        <li><a href="about.html"><i class="fas fa-user btn btn-primary"></i> About </a></li>
+                        <li><a href="contactme.html"><i class="fas fa-handshake"></i> CollabWorks </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="intro" class="row">
+            <div class="col-md-6 order-md-2">
+                <div class="img-container">
+                    <img src="IMG_7655.JPG" alt="Your Photo" class="img-fluid rounded mb-4">
+                </div>
+                <h2 class="name">MAMIDALA THORAJ</h2>
+                <p class="designation">VIT-AP Sophomore| Front-End Developer | CSI Marketing TeamMember</p>
+                <div class="social-links">
+                    <a href="https://github.com/ThorajM" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/thorajmamidala" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href=" https://wa.me/qr/B7SWTZNPNF5FI1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/thoraj_naidu" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                </div>
+                <div class="options">
+                    <nav>
+                        <ul>
+                            <li><a href="Thorajmamidala.pdf" class="btn btn-primary ">Download Resume</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('menuIcon');
+            const menuContainer = document.getElementById('menuContainer');
+
+            // Function to show menu container
+            function showMenuContainer() {
+                menuContainer.style.display = 'block';
+            }
+
+            // Function to hide menu container
+            function hideMenuContainer() {
+                menuContainer.style.display = 'none';
+            }
+
+            // Event listener for mouse enter on menu icon
+            menuIcon.addEventListener('mouseenter', showMenuContainer);
+
+            // Event listener for mouse leave on menu icon
+            menuIcon.addEventListener('mouseleave', hideMenuContainer);
+
+            // Event listener for mouse enter on menu container
+            menuContainer.addEventListener('mouseenter', showMenuContainer);
+
+            // Event listener for mouse leave on menu container
+            menuContainer.addEventListener('mouseleave', hideMenuContainer);
+        });
+    </script>
+</body>
+
+</html>
