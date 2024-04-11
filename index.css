@@ -1,6 +1,6 @@
 body {
     font-family: 'DM Serif Display', serif;
-    background-color: #e1e9e0;
+    background-color: #f8faf6;
     color: #333;
     margin: 0;
     padding: 0;
@@ -159,7 +159,7 @@ body {
 }
 
 .options .btn-primary {
-    background-color: #596500;
+    background-color: #122908;
     border-color: #E4E4D0;
     color: #fff;
     padding: 10px 20px;
