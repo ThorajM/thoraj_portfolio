@@ -1,13 +1,11 @@
-/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E1F0DA; /* Updated background color */
+    background-color: #E1F0DA; /* Background color */
     animation: fadeInBody 1s ease;
 }
 
@@ -25,7 +23,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #FFF; /* Updated background color */
+    background-color: #FFF; /* White background */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: fadeInContainer 1s ease;
@@ -42,7 +40,6 @@ body {
     }
 }
 
-/* Menu Icon Styles */
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -60,14 +57,13 @@ body {
     transform: rotate(90deg);
 }
 
-/* Main Container Styles */
 .maincontainer {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 250px;
-    background-color: #D4E7C5; /* Updated background color */
+    background-color: #D4E7C5; /* Light green background */
     z-index: 999;
     font-family: 'Montserrat', sans-serif;
     animation: slideInLeft 0.5s forwards, fadeInMainContainer 1s ease-in-out;
@@ -86,7 +82,6 @@ body {
     }
 }
 
-/* Navigation Styles */
 .navi {
     padding: 20px 0;
     text-align: left;
@@ -103,16 +98,15 @@ body {
     padding: 15px;
     text-decoration: none;
     border-radius: 30px;
-    color: #080808;
+    color: #080808; /* Dark text color */
     font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .navi ul li a:hover {
-    background-color: #BFD8AF; /* Updated background color */
+    background-color: #BFD8AF; /* Light green background on hover */
 }
 
-/* Form Styles */
 form {
     margin-top: 20px;
     animation: fadeInForm 1s ease;
@@ -130,18 +124,15 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #333; /* Dark gray color for labels */
     font-weight: 700;
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-input[type="date"] {
+.input-field {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Light gray border */
     border-radius: 4px;
     font-size: 16px;
 }
@@ -150,8 +141,8 @@ textarea {
     height: 150px;
 }
 
-input[type="submit"] {
-    background-color: #99BC85; /* Updated background color */
+.submit-button {
+    background-color: #99BC85; /* Light green */
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -161,11 +152,39 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #BFD8AF; /* Updated background color */
+.submit-button:hover {
+    background-color: #BFD8AF; /* Slightly lighter green */
 }
 
-/* Social Links Styles */
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+    animation: slideInContactInfo 1s ease;
+}
+
+@keyframes slideInContactInfo {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-info-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.contact-info-text {
+    font-size: 1.1em;
+    color: #555;
+}
+
 .social-links {
     margin-top: 40px;
     text-align: center;
@@ -183,14 +202,11 @@ input[type="submit"]:hover {
     }
 }
 
-.social-links h2 {
-    margin-bottom: 20px;
-    font-size: 20px; /* Increased font size */
+.social-links-title {
+    font-size: 1.5em;
     font-weight: 700;
-    color: #333; /* Updated text color */
-    animation: fadeInText 1s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Added text shadow */
-    letter-spacing: 1px; /* Added letter spacing */
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .social-links ul {
@@ -212,19 +228,16 @@ input[type="submit"]:hover {
     color: #333;
 }
 
-.social-links ul li a img {
+.social-icon {
     width: 40px;
     height: 40px;
- 
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Added border-color transition */
+    transition: transform 0.3s ease;
 }
 
-.social-links ul li a img:hover {
+.social-icon:hover {
     transform: scale(1.2);
-    border-color: #104a04; /* Changed border-color on hover */
 }
 
-/* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
     .container {
         width: 95%;
