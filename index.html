@@ -14,11 +14,11 @@
 
 <body>
     <header>
-        <!-- Menu Icon -->
+
         <div class="menu-icon" id="menuIcon">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- Menu Container -->
+
         <div class="maincontainer" id="menuContainer" style="display: none;">
             <div class="col-md-6 order-md-1">
                 <nav class="navi">
@@ -38,7 +38,7 @@
                     <img src="IMG_7655.JPG" alt="Your Photo" class="img-fluid rounded mb-4">
                 </div>
                 <h2 class="name">MAMIDALA THORAJ</h2>
-                <p class="designation">VIT-AP Junior| Front-End Developer | CSI Marketing TeamMember</p>
+                <p class="designation">VIT-AP Junior | Web Developer | Java Developer </p>
                 <div class="social-links">
                     <a href="https://github.com/ThorajM" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/thorajmamidala" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -49,7 +49,7 @@
                 <div class="options">
                     <nav>
                         <ul>
-                            <li><a href="Thorajmamidala.pdf" class="btn btn-primary ">Download Resume</a></li>
+                            <li><a href="THORAJ RESUME.pdf" class="btn btn-primary button ">Download Resume</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -61,27 +61,15 @@
         document.addEventListener('DOMContentLoaded', function () {
             const menuIcon = document.getElementById('menuIcon');
             const menuContainer = document.getElementById('menuContainer');
-
-            // Function to show menu container
             function showMenuContainer() {
                 menuContainer.style.display = 'block';
             }
-
-            // Function to hide menu container
             function hideMenuContainer() {
                 menuContainer.style.display = 'none';
             }
-
-            // Event listener for mouse enter on menu icon
             menuIcon.addEventListener('mouseenter', showMenuContainer);
-
-            // Event listener for mouse leave on menu icon
             menuIcon.addEventListener('mouseleave', hideMenuContainer);
-
-            // Event listener for mouse enter on menu container
-            menuContainer.addEventListener('mouseenter', showMenuContainer);
-
-            // Event listener for mouse leave on menu container
+            menuContainer.addEventListener('mouseenter', showMenuContainer);           
             menuContainer.addEventListener('mouseleave', hideMenuContainer);
         });
     </script>
