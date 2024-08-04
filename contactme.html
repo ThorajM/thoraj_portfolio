@@ -9,86 +9,78 @@
 </head>
 <body>
     <header>
-        <!-- Menu Icon -->
         <div class="menu-icon" id="menuIcon">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- Menu Container -->
         <div class="maincontainer" id="menuContainer" style="display: none;">
-            <div class="col-md-6 order-md-1">
-                <nav class="navi">
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-                        <li><a href="contactme.html"><i class="fas fa-handshake"></i> CollabWorks </a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="navi">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+                    <li><a href="contactme.html"><i class="fas fa-handshake"></i> CollabWorks</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     
     <div class="container">
         <div class="content">
-            <h1>Let's Create Something Extraordinary!</h1>
-            <p>If you're ready to turn your ideas into reality, fill out the form below and let's get started!</p>
-            <form action="mailto:thoraj2004@gmail.com" method="post" enctype="text/plain">
+            <h1 class="page-title">Let's Create Something Extraordinary!</h1>
+            <p class="intro-text">If you're ready to turn your ideas into reality, fill out the form below and let's get started!</p>
+            <form action="mailto:thoraj2004@gmail.com" method="post" enctype="text/plain" class="contact-form">
                 <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required aria-label="Your Name">
+                <input type="text" id="name" name="name" required aria-label="Your Name" class="input-field">
+                
                 <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required aria-label="Your Email">
+                <input type="email" id="email" name="email" required aria-label="Your Email" class="input-field">
+                
                 <label for="company">Company Name:</label>
-                <input type="text" id="company" name="company" aria-label="Company Name">
+                <input type="text" id="company" name="company" aria-label="Company Name" class="input-field">
+                
                 <label for="project">Tell me about your project:</label>
-                <textarea id="project" name="project" required aria-label="Project Description"></textarea>
+                <textarea id="project" name="project" required aria-label="Project Description" class="input-field"></textarea>
+                
                 <label for="deadline">Project Deadline:</label>
-                <input type="date" id="deadline" name="deadline" aria-label="Project Deadline">
+                <input type="date" id="deadline" name="deadline" aria-label="Project Deadline" class="input-field">
+                
                 <input type="submit" value="Submit" class="submit-button">
             </form>
         </div>
         
         <div class="side-content">
             <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Feel free to reach out to me via email or connect on social media.</p>
-                 
+                <h2 class="contact-info-title">Contact Information</h2>
+                <p class="contact-info-text">Feel free to reach out to me via email or connect on social media.</p>
             </div>
             <div class="social-links">
-                 
+                <h2 class="social-links-title">Find Me On</h2>
                 <ul>
-                    <li><a href="mailto:thoraj2004@gmail.com" aria-label="Email"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email"></a></li>
-                    <li><a href="https://www.linkedin.com/in/thorajmamidala" target="_blank" aria-label="LinkedIn"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a></li>
-                    <li><a href="https://github.com/ThorajM" target="_blank" aria-label="GitHub"><img src="https://img.icons8.com/material-outlined/48/000000/github.png" alt="GitHub"></a></li>
+                    <li><a href="mailto:thoraj2004@gmail.com" aria-label="Email"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email" class="social-icon"></a></li>
+                    <li><a href="https://www.linkedin.com/in/thorajmamidala" target="_blank" aria-label="LinkedIn"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" class="social-icon"></a></li>
+                    <li><a href="https://github.com/ThorajM" target="_blank" aria-label="GitHub"><img src="https://img.icons8.com/material-outlined/48/000000/github.png" alt="GitHub" class="social-icon"></a></li>
                 </ul>
             </div>
         </div>
     </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const menuIcon = document.getElementById('menuIcon');
-          const menuContainer = document.getElementById('menuContainer');
+            const menuIcon = document.getElementById('menuIcon');
+            const menuContainer = document.getElementById('menuContainer');
 
-          // Function to show menu container
-          function showMenuContainer() {
-              menuContainer.style.display = 'block';
-          }
+            function showMenuContainer() {
+                menuContainer.style.display = 'block';
+            }
 
-          // Function to hide menu container
-          function hideMenuContainer() {
-              menuContainer.style.display = 'none';
-          }
+            function hideMenuContainer() {
+                menuContainer.style.display = 'none';
+            }
 
-          // Event listener for mouse enter on menu icon
-          menuIcon.addEventListener('mouseenter', showMenuContainer);
-
-          // Event listener for mouse leave on menu icon
-          menuIcon.addEventListener('mouseleave', hideMenuContainer);
-
-          // Event listener for mouse enter on menu container
-          menuContainer.addEventListener('mouseenter', showMenuContainer);
-
-          // Event listener for mouse leave on menu container
-          menuContainer.addEventListener('mouseleave', hideMenuContainer);
-      });
-  </script>
+            menuIcon.addEventListener('mouseenter', showMenuContainer);
+            menuIcon.addEventListener('mouseleave', hideMenuContainer);
+            menuContainer.addEventListener('mouseenter', showMenuContainer);
+            menuContainer.addEventListener('mouseleave', hideMenuContainer);
+        });
+    </script>
 </body>
 </html>
