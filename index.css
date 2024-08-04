@@ -1,78 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    font-family: 'DM Serif Display', serif;
+    background-color: #f8faf6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    animation: fadeInContainer 1s ease-in-out;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-</head>
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
 
-<body>
-    <header>
+.menu-icon i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
 
-        <div class="menu-icon" id="menuIcon">
-            <i class="fas fa-bars"></i>
-        </div>
+.menu-icon:hover i {
+    transform: rotate(90deg);
+}
 
-        <div class="maincontainer" id="menuContainer" style="display: none;">
-            <div class="col-md-6 order-md-1">
-                <nav class="navi">
-                    <ul>
-                        <li><a href="about.html"><i class="fas fa-user btn btn-primary"></i> About </a></li>
-                        <li><a href="contactme.html"><i class="fas fa-handshake"></i> CollabWorks </a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+.maincontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #D4E7C5; /* Light green background */
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+    animation: slideInLeft 0.5s forwards, fadeInMainContainer 1s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    <div class="container">
-        <section id="intro" class="row">
-            <div class="col-md-6 order-md-2">
-                <div class="img-container">
-                    <img src="IMG_7655.JPG" alt="Your Photo" class="img-fluid rounded mb-4">
-                </div>
-                <h2 class="name">MAMIDALA THORAJ</h2>
-                <p class="designation">VIT-AP Junior | Web Developer | Java Developer </p>
-                <div class="social-links">
-                    <a href="https://github.com/ThorajM" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/thorajmamidala" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href=" https://wa.me/qr/B7SWTZNPNF5FI1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/thoraj_naidu" target="_blank"><i class="fab fa-instagram"></i></a>
+@keyframes fadeInMainContainer {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-                </div>
-                <div class="options">
-                    <nav>
-                        <ul>
-                            <li><a href="THORAJ RESUME.pdf" class="btn btn-primary button ">Download Resume</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </section>
-    </div>
+.navi {
+    padding: 20px 0;
+    text-align: left;
+}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.getElementById('menuIcon');
-            const menuContainer = document.getElementById('menuContainer');
-            function showMenuContainer() {
-                menuContainer.style.display = 'block';
-            }
-            function hideMenuContainer() {
-                menuContainer.style.display = 'none';
-            }
-            menuIcon.addEventListener('mouseenter', showMenuContainer);
-            menuIcon.addEventListener('mouseleave', hideMenuContainer);
-            menuContainer.addEventListener('mouseenter', showMenuContainer);           
-            menuContainer.addEventListener('mouseleave', hideMenuContainer);
-        });
-    </script>
-</body>
+.navi ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    animation: fadeInListItem 1s ease-in-out;
+}
 
-</html>
+.navi ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #080808;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.navi ul li a:hover {
+    background-color: #BFD8AF; 
+}
+
+.col-md-6.order-md-1 {
+    padding: 20px;
+}
+
+
+.img-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    font-family: "Alice", serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideInName 1s ease-in-out;
+}
+
+.designation {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    animation: slideInDesignation 1s ease-in-out;
+}
+
+.social-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #E4E4D0;
+}
+
+.social-links .fab.fa-whatsapp {
+    color: #0a6b1e;  
+}
+
+.social-links .fab.fa-instagram {
+    color: #ce082c;  
+}
+
+.social-links .fab.fa-linkedin {
+    color: #0077B5;  
+}
+
+.social-links .fab.fa-github {
+    color: #181717;  
+}
+
+.options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.options .btn-primary {
+    background-color: #122908;
+    border-color: #E4E4D0;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.options .btn-primary:hover {
+    background-color: #455701;
+    border-color: #E4E4D0;
+    color: #fff;
+}
+
+.options nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.options nav ul li:last-child {
+    margin-right: 0;
+}
+
+.options nav ul li a {
+    text-decoration: none;
+    color: #E4E4D0;
+}
+.button
+{
+    background-color: #455701;
+}
+
+ 
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInListItem {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInName {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDesignation {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .name {
+        font-size: 28px;
+    }
+    .designation {
+        font-size: 16px;
+    }
+    .social-links a {
+        font-size: 20px;
+    }
+    .options .btn-primary {
+        padding: 8px 16px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .name {
+        font-size: 24px;
+    }
+    .designation {
+        font-size: 14px;
+    }
+    .social-links a {
+        font-size: 16px;
+    }
+    .options .btn-primary {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
